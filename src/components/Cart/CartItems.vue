@@ -7,13 +7,10 @@
 </template>
 
 <script>
-import CartItem from './CartItem.vue'
 export default {
     props: {
         cartItems: Array,
     },
-    components: {
-        CartItem,
-    },
+
 }
 </script>
