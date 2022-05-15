@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-4 gap-4">
         <div class="border p-2 shadow-lg rounded" v-for="(item, index) in itemsArray">
-            <SingleItem :item="item" @addItemToCart="addItemToCart" />
+            <SingleItem :item="item" @addItemToCart="addItemToCart" @returnItems="returnItems" />
         </div>
     </div>
 </template>
@@ -51,6 +51,15 @@ export default {
             ],
 
         }
+    },
+    mounted() {
+        this.eventBus.on('returnItems', (cartItem) => {
+            this.itemsArray.map(element => {
+                if (element.id == cartItem.id) {
+                    element.stockQuantity = element.stockQuantity + cartItem.quantity;
+                }
+            })
+        })
     },
 }
 </script>
