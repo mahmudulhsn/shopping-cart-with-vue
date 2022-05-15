@@ -2,7 +2,7 @@
     <tr v-for="(cartItem, index) in  cartItems">
         <td>{{ cartItem.name }}</td>
         <td>{{ cartItem.quantity }}</td>
-        <td>{{ cartItem.price }}</td>
+        <td>{{ cartItem.totalAmount }}</td>
     </tr>
 </template>
 
