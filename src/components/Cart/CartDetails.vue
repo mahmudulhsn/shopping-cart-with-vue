@@ -19,7 +19,7 @@
             </div>
 
             <div class="inset-x-0 bottom-0 text-xl border-t-2 flex">
-                <div class="w-1/2 text-left pl-2">Total</div>
+                <div class="w-1/2 text-left pl-2 font-bold">Total</div>
                 <div class="w-1/2 text-right pr-2">{{ finalTotal }}</div>
             </div>
         </div>

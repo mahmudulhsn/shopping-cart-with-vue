@@ -3,7 +3,10 @@
         <td>{{ cartItem.name }}</td>
         <td>{{ cartItem.quantity }}</td>
         <td>{{ cartItem.totalAmount }}</td>
-        <td class="text-red-600 font-bold text-xl cursor-pointer" @click="removeFromCart(cartItem)">X</td>
+        <td><span
+                class="text-white font-bold text-xl cursor-pointer bg-red-600 rounded-full px-3 py-1 hover:bg-red-900 duration-300"
+                @click="removeFromCart(cartItem)">X</span>
+        </td>
     </tr>
 </template>
 
